@@ -10,7 +10,7 @@
     <div class="amount-container">
       <div class="deposit amount-box">
         <div>
-          <h1 class="amount">00</h1>
+          <h1 id="deposit-amount" class="amount">00</h1>
           <p>Deposit</p>
         </div>
       </div>
@@ -29,9 +29,9 @@
     </div>
     <div class="deposit-withdraw-container">
       <div class="deposit-box input-box">
-        <input type="number" name="" id="" />
+        <input type="number" name="" id="deposit-input" />
         <br />
-        <button class="btn deposit-btn">Deposit</button>
+        <button onclick="handleDeposit()" class="btn deposit-btn">Deposit</button>
       </div>
       <div class="withdraw-box input-box">
         <input type="number" name="" id="" />
