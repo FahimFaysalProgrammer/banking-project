@@ -18,27 +18,41 @@ function handleDeposit() {
   // console.log(sum);
   document.getElementById("deposit-amount").innerText = sum;
   document.getElementById("deposit-input").value = "";
+
+  // Total Balance
+  var balanceAmount = document.getElementById("balance-amount").innerText;
+  var convertedBalanceAmount = convertStringToNumber(balanceAmount);
+  var balanceSum = convertedInputValue + convertedBalanceAmount;
+  document.getElementById("balance-amount").innerText = balanceSum;
 }
 
+
+// Common function:
 function convertStringToNumber(value) {
   return parseFloat(value);
 }
 
-
-
 // Withdrew Section:
-function handleWithdraw(){
-    // console.log("Hello World");
-    var inputWithdrawValue = document.getElementById("withdraw-input").value;
-    // console.log(inputWithdrawValue);
-    var convertedInputWithdrawValue = convertStringToNumber(inputWithdrawValue);
-    // console.log(convertedInputWithdrawValue);
+function handleWithdraw() {
+  // console.log("Hello World");
+  var inputWithdrawValue = document.getElementById("withdraw-input").value;
+  // console.log(inputWithdrawValue);
+  var convertedInputWithdrawValue = convertStringToNumber(inputWithdrawValue);
+  // console.log(convertedInputWithdrawValue);
 
-    var withdrawAmount = document.getElementById("withdraw-amount").innerText;
-    var convertedWithdrawAmount = convertStringToNumber(withdrawAmount);
+  var withdrawAmount = document.getElementById("withdraw-amount").innerText;
+  var convertedWithdrawAmount = convertStringToNumber(withdrawAmount);
 
-    var sumWithdraw = convertedInputWithdrawValue + convertedWithdrawAmount;
-    // console.log(sumWithdraw);
-    document.getElementById("withdraw-amount").innerText = sumWithdraw;
-    document.getElementById("withdraw-input").value = "";
+  var sumWithdraw = convertedInputWithdrawValue + convertedWithdrawAmount;
+  // console.log(sumWithdraw);
+  document.getElementById("withdraw-amount").innerText = sumWithdraw;
+  document.getElementById("withdraw-input").value = "";
+
+  // Total Balance
+  var balanceAmount = document.getElementById("balance-amount").innerText;
+  var convertedBalanceAmount = convertStringToNumber(balanceAmount);
+  var balanceSum = convertedBalanceAmount - convertedInputWithdrawValue;
+  document.getElementById("balance-amount").innerText = balanceSum;
 }
+
+// Total Balance Section:
